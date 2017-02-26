@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form name="userForm" novalidate>
+                <div class="form-group">
+                    <label class="control-label">Loan Amount</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">$</span>
+                        <input type="number" min="0" class="form-control form-control-success" name="amount"
+                               ng-model="user.amount" required placeholder="Amount"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label">Interest Rate (%)</label>
+                    <input type="number" min="0" class="form-control" name="interest" ng-model="user.interest" required
+                           placeholder="Interest Rate (%)"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label">Loan period (months)</label>
+                    <input type="number" min="1" step="1" class="form-control" name="term" ng-model="user.term" required
+                           placeholder="Loan period (months)"/>
+                </div>
+
+                <button class="btn btn-primary" ng-click="save()">Calculate</button>
+                <button class="btn btn-link" ng-click="reset()">Reset</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-body" ng-bind="payment"></div>
+    </div>
+</div>
+
