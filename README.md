@@ -6,9 +6,13 @@ WYSIWYG app to calculate monthly payments on any kind of loan.
 
 
 To run:
-- npm start
-- run localhost:8000
+```
+npm start
+run localhost:8000
+```
 
 To test (end to end):
-- npm start
-- npm run protractor
+```
+npm start
+npm run protractor
+```
